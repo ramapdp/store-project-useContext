@@ -13,9 +13,9 @@ class ErrorBoundary extends Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="bg-white min-h-screen">
-          <h2 className="text-black">
-            There was an error with this listing. <Link to="/">Click here</Link>{" "}
+        <div className="bg-white min-h-screen px-2 pt-2">
+          <h2 className="text-gray-600 font-normal italic">
+            There was an error with this listing. <Link to="/" className="text-indigo-600">Click here</Link>{" "}
             to back to the home page.
           </h2>
         </div>
