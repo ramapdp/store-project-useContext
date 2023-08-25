@@ -1,8 +1,8 @@
 import {
   CheckIcon,
   ClockIcon,
-  QuestionMarkCircleIcon,
   XMarkIcon,
+  QuestionMarkCircleIcon,
 } from "@heroicons/react/20/solid";
 import { useState } from "react";
 import Modal from "./Modal";
@@ -113,11 +113,6 @@ export default function Cart() {
                           </div>
                           <div className="mt-1 flex text-sm">
                             <p className="text-gray-500">{product.color}</p>
-                            {product.size ? (
-                              <p className="ml-4 border-l border-gray-200 pl-4 text-gray-500">
-                                {product.size}
-                              </p>
-                            ) : null}
                           </div>
                           <p className="mt-1 text-sm font-medium text-gray-900">
                             {product.price}
