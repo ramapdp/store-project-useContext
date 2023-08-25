@@ -5,7 +5,7 @@ const Product = (props) => {
 
   return (
     <Link key={id} to={`/products/${id}`} className="group text-sm">
-      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
+      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75 group-hover:scale-110">
         <img
           src={image_url}
           alt={image_alt}
