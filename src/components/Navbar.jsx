@@ -114,11 +114,7 @@ const Navbar = ({ onSearch }) => {
                 </Disclosure.Button>
               ))}
             </div>
-<<<<<<< HEAD
             <div className="border-t border-gray-200 pb-3 pt-4 px-3">
-=======
-            <div className="border-t border-gray-200 pb-3 pt-4 px-4">
->>>>>>> 26f61b6eaa61072e25380d16223bd8cb6819ae47
               <Link
                 to={"/cart"}
                 type="button"
