@@ -43,7 +43,7 @@ const ProductList = () => {
             </h1>
           ) : (
             <div className="mx-auto max-w-7xl overflow-hidden px-4 py-8 sm:px-6 sm:py-8 lg:px-8">
-              <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8">
+              <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 lg:gap-x-8">
                 {filteredProducts.map((product) => (
                   <Product key={product.id} {...product} />
                 ))}

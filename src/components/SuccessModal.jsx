@@ -42,7 +42,7 @@ export default function SuccesModal({ onSuccess, open, setOpen }) {
                       as="h3"
                       className="text-base font-semibold leading-6 text-gray-900"
                     >
-                      Payment successful
+                      Checkout successful
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
