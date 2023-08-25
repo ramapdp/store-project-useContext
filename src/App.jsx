@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import PageNotFound from "./components/PageNotFound";
 import Details from "./components/Details";
+import Cart from "./components/Cart";
 import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -31,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ProductList  />} />
           <Route path="/products/:id" element={<Details />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </QueryClientProvider>

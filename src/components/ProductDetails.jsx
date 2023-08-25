@@ -2,12 +2,12 @@ import { CheckIcon, QuestionMarkCircleIcon } from "@heroicons/react/20/solid";
 import { ShieldCheckIcon } from "@heroicons/react/24/outline";
 
 const ProductDetails = ({ product, onAddClick }) => {
-
   return (
     <div className="bg-white min-h-screen">
-      <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-1 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-8 lg:py-8 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
         {/* Product details */}
         <div className="lg:max-w-lg lg:self-end">
+          <h2 className="text-gray-500 text-lg font-medium">Details Product</h2>
           <div className="mt-4">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               {product.name}
@@ -78,7 +78,7 @@ const ProductDetails = ({ product, onAddClick }) => {
                   className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
                   onClick={onAddClick}
                 >
-                  Add to bag
+                  Add to cart
                 </button>
               </div>
               <div className="mt-6 text-center">

@@ -6,7 +6,7 @@ import ProductDetails from "./ProductDetails";
 import ErrorBoundary from "./ErrorBoundary";
 import Modal from "./Modal";
 import { useState } from "react";
-import ModalShow from "./ModalShow";
+import ModalShow from "./ConfirmModal";
 
 const Details = () => {
   const { id } = useParams();

@@ -8,16 +8,14 @@ import {
 } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "All Products", href: "/", current: true },
-  { name: "Category", href: "/", current: false },
-  { name: "Reviews", href: "/", current: false },
+  { name: "All Products", href: "/", current: true }
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Navbar = ({ onSearch}) => {
+const Navbar = ({ onSearch }) => {
   return (
     <Disclosure as="header" className="bg-white shadow">
       {({ open }) => (
@@ -67,14 +65,14 @@ const Navbar = ({ onSearch}) => {
                 </Disclosure.Button>
               </div>
               <div className="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center">
-                <button
-                  type="button"
+                <Link
                   className="relative flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  to={"/cart"}
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
                   <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                </Link>
               </div>
             </div>
             <nav
@@ -123,6 +121,6 @@ const Navbar = ({ onSearch}) => {
       )}
     </Disclosure>
   );
-}
+};
 
 export default Navbar;
