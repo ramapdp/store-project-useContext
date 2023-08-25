@@ -6,22 +6,16 @@ import ProductDetails from "./ProductDetails";
 import ErrorBoundary from "./ErrorBoundary";
 import Modal from "./Modal";
 import { useState } from "react";
-import ModalShow from "./ConfirmModal";
+import NotifAdded from "./NotifAdded";
 
 const Details = () => {
   const { id } = useParams();
   const results = useQuery(["products", id], fetchProductById);
-  const [showModal, setShowModal] = useState(false);
+  const [showNotif, setShowNotif] = useState(false);
   
   const onAddEventHandler = (e) => {
     e.preventDefault();
-    setShowModal(true);
-  };
-
-  const onConfirmEventHandler = (e) => {
-    e.preventDefault();
-    setShowModal(false);
-    console.log("user membeli barang ini");
+    setShowNotif(true);
   };
 
   if (results.isLoading) {
@@ -33,13 +27,12 @@ const Details = () => {
   return (
     <>
       <ProductDetails product={product} onAddClick={onAddEventHandler} />
-      {showModal ? (
+      {showNotif ? (
         <Modal>
           <div>
-            <ModalShow
-              onConfirm={onConfirmEventHandler}
-              setOpen={setShowModal}
-              open={showModal}
+            <NotifAdded
+              setShow={setShowNotif}
+              show={showNotif}
             />
           </div>
         </Modal>
