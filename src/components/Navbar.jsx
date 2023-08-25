@@ -7,9 +7,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-const navigation = [
-  { name: "All Products", href: "/", current: true }
-];
+const navigation = [{ name: "All Products", href: "/", current: true }];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -115,6 +113,17 @@ const Navbar = ({ onSearch }) => {
                   {item.name}
                 </Disclosure.Button>
               ))}
+            </div>
+            <div className="border-t border-gray-200 pb-3 pt-4 px-4">
+              <Link
+                to={"/cart"}
+                type="button"
+                className="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              >
+                <span className="absolute -inset-1.5" />
+                <span className="sr-only">View notifications</span>
+                <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+              </Link>
             </div>
           </Disclosure.Panel>
         </>
