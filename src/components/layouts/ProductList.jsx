@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Product from "./Product";
-import Spinner from "./Spinner";
-import SearchContext from "./SearchContext";
+import Product from "@components/fragments/Product";
+import Spinner from "@components/fragments/Spinner";
+import SearchContext from "@utils/context/SearchContext";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);

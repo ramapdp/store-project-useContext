@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import fetchProductById from "./fetchProductById";
-import Spinner from "./Spinner";
-import ProductDetails from "./ProductDetails";
-import ErrorBoundary from "./ErrorBoundary";
-import Modal from "./Modal";
+import fetchProductById from "@utils/fetchProductById";
+import Spinner from "@components/fragments/Spinner";
+import ProductDetails from "@components/layouts/ProductDetails";
+import Modal from "@components/fragments/modal";
 import { useState } from "react";
-import NotifAdded from "./NotifAdded";
+import NotifAdded from "@components/fragments/NotifAdded";
+import ErrorBoundary from "@components/fragments/ErrorBoundary";
 
 const Details = () => {
   const { id } = useParams();
