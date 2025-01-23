@@ -7,6 +7,7 @@ import Cart from "@components/layouts/Cart";
 import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import SearchContext from "@utils/context/SearchContext";
+import Hero from "@components/layouts/Hero";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -28,11 +29,12 @@ function App() {
     <BrowserRouter>
       <SearchContext.Provider value={searchKeywords}>
         <QueryClientProvider client={queryClient}>
-          <header>
+          <header className="sticky top-0 z-50 bg-white shadow-sm">
             <Navbar onSearch={onSearchEventHandler} />
           </header>
           <Routes>
-            <Route path="/" element={<ProductList />} />
+            <Route path="/" element={<Hero />} />
+            <Route path="/products" element={<ProductList />} />
             <Route path="/products/:id" element={<Details />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<PageNotFound />} />
