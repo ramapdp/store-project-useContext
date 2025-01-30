@@ -5,7 +5,7 @@ import {
   ShoppingCartIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import SearchInput from "./SearchInput";
+import SearchInput from "@components/SearchInput";
 import { Fragment } from "react";
 
 const navigation = [

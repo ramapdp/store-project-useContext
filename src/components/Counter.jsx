@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, useSpring, animate } from "framer-motion";
-import { formatNumber } from "@/helpers/formatNumber";
+import { formatNumber } from "@helpers/formatNumber";
 
 const Counter = (props) => {
   const { count = 0, title } = props;

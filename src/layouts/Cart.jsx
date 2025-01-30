@@ -5,9 +5,9 @@ import {
   QuestionMarkCircleIcon,
 } from "@heroicons/react/20/solid";
 import { useState } from "react";
-import Modal from "@components/fragments/modal";
-import ConfirmModal from "@components/fragments/modal/ConfirmModal";
-import SuccesModal from "@components/fragments/modal/SuccessModal";
+import Modal from "@components/modal";
+import ConfirmModal from "@components/modal/ConfirmModal";
+import SuccesModal from "@components/modal/SuccessModal";
 import { useNavigate } from "react-router-dom";
 
 const products = [
