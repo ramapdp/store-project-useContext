@@ -1,9 +1,14 @@
-import React from 'react'
+import Brands from "@layouts/brands";
+import Hero from "@layouts/hero";
+import React, { Fragment } from "react";
 
 const LandingPage = () => {
   return (
-    <div>LandingPage</div>
-  )
-}
+    <Fragment>
+      <Hero />
+      <Brands />
+    </Fragment>
+  );
+};
 
-export default LandingPage
+export default LandingPage;

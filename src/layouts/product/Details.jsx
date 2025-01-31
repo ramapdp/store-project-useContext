@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import fetchProductById from "@utils/fetchProductById";
 import Spinner from "@components/Spinner";
-import ProductDetails from "@layouts/ProductDetails";
+import ProductDetails from "@layouts/product/ProductDetails";
 import Modal from "@components/modal";
 import { useState } from "react";
 import NotifAdded from "@components/NotifAdded";
