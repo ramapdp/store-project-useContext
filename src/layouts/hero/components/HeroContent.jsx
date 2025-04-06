@@ -8,7 +8,7 @@ import CounterSection from "@layouts/hero/components/CounterSection";
 const HeroContent = () => (
   <div className="flex flex-col gap-5">
     <motion.h1
-      className="text-[#ff0000] text-[64px]"
+      className="text-color-red text-[64px]"
       {...HERO_ANIMATION}
       transition={{ duration: 0.8 }}
     >

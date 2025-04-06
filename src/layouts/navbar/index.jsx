@@ -12,7 +12,7 @@ const Navbar = ({ onSearch }) => {
     <header className="bg-white shadow-sm">
       <div className="flex flex-row h-16 mx-auto max-w-7xl px-2 sm:px-4 lg:px-8 gap-1 justify-between">
         <div className="flex justify-start items-center">
-          <Link to="/" className="text-3xl text-[#ff0000]">
+          <Link to="/" className="text-3xl text-color-red">
             <h1 className="-mt-2">SHOP.CO</h1>
           </Link>
         </div>

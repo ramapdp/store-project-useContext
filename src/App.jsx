@@ -1,23 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "@layouts/navbar";
-import ProductList from "@layouts/not-found/ProductList";
-import PageNotFound from "@layouts/PageNotFound";
+import ProductList from "@layouts/product/ProductList";
+import PageNotFound from "@layouts/not-found/PageNotFound";
 import Details from "@layouts/product/Details";
 import Cart from "@layouts/cart/Cart";
 import { useState } from "react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import SearchContext from "@utils/context/SearchContext";
-import Hero from "@layouts/hero";
 import LandingPage from "@pages/LandingPage";
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: Infinity,
-      cacheTime: Infinity,
-    },
-  },
-});
+import { queryClient } from "@lib/queryClient";
+import WebTemplate from "@layouts/web-template";
 
 function App() {
   const [searchKeywords, setSearchKeywords] = useState("");
@@ -30,7 +22,7 @@ function App() {
     <BrowserRouter>
       <SearchContext.Provider value={searchKeywords}>
         <QueryClientProvider client={queryClient}>
-          <header className="sticky top-0 z-50 bg-white shadow-sm">
+          {/* <header className="sticky top-0 z-50 bg-white shadow-sm">
             <Navbar onSearch={onSearchEventHandler} />
           </header>
           <Routes>
@@ -39,6 +31,12 @@ function App() {
             <Route path="/products/:id" element={<Details />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<PageNotFound />} />
+          </Routes> */}
+          <Routes>
+            <Route path="/" element={<WebTemplate />}>
+              <Route index element={<LandingPage />} />
+              <Route path="/products" element={<ProductList />} />
+            </Route>
           </Routes>
         </QueryClientProvider>
       </SearchContext.Provider>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Counter from "@components/Counter";
+import Counter from "@components/counter/Counter";
 import {
   HERO_COUNTERS,
   HERO_ANIMATION,
